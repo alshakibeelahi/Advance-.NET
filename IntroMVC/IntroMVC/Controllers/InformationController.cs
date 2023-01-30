@@ -24,5 +24,11 @@ namespace IntroMVC.Controllers
         {
             return View();
         }
+        public ActionResult links(int? link)
+        {
+            if (link == 1) return Redirect("https://drive.google.com/drive/u/0/folders/11XQcouAIAFTiTCW2BqyLL0-5eGrhiG71");
+            else if (link == 2) return Redirect("https://github.com/sajid43677/SmartHostel");
+            else return Redirect("https://github.com/AlShakibEElahi/Smart_Hostel");
+        }
     }
 }
