@@ -8,21 +8,25 @@
 <table class="table table-bordered">
     <tr>
         <th>Category Name</th>
-        <th>ID</th>
-        <th>Name</th>
-        <th>Price</th>
+        <th>Item</th>
     </tr>
     @foreach (var item in ViewBag.Category)
     {
         <tr>
             <td>@item.CName</td>
-            @for(int i = 0; i < ViewBag.Category.Products.Length; i++)
+            <td>
+                @foreach (var proinfo in item.Products)
                 {
-                ///! to many association
-                } 
-            <td>@item.Id</td>
-            <td>@item.Name</td>
-            <td>@item.Price</td>
+                    <table class="table table-bordered">
+                        <tr>
+                            <td>@proinfo.Id</td>
+                            <td>@proinfo.Name</td>
+                            <td>@proinfo.Price</td>
+                        </tr>
+                    </table>
+                }
+            </td>
+            
         </tr>
     }
 
