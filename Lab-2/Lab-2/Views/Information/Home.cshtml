@@ -1,0 +1,107 @@
+﻿
+@{
+    ViewBag.Title = "Home";
+}
+
+<h2>Information</h2>
+
+@{
+    bool checkGender(string gender)
+    {
+        if (Model != null && Model.Gender != null)
+        {
+            if (gender.Equals(Model.Gender)) return true;
+        }
+        return false;
+    }
+}
+
+@{
+    bool checkHobby(string hobby)
+    {
+        if (Model != null && Model.Hobbies != null)
+        {
+            foreach (var item in Model.Hobbies)
+            {
+                if (item.Equals(hobby)) return true;
+            }
+        }
+        return false;
+    }
+}
+
+@{
+    bool checkProfession(string prof)
+    {
+        if (Model != null && Model.Profession != null)
+        {
+             if (prof.Equals(Model.Profession)) return true;
+        }
+        return false;
+    }
+}
+
+
+<form method="post">
+    <table class="table table-hover">
+        <tr>
+            <td>Name:</td>
+            <td>
+                <input type="text" name="Name" value="@(Model == null ? "":Model.Name)" />
+                <span class="text-danger">@Html.ValidationMessage("Name")</span>
+            </td>
+        </tr>
+        <tr>
+            <td>ID:</td>
+            <td>
+                <input type="text" name="Id" value="@(Model == null ? "":Model.Id)" />
+                <span class="text-danger">@Html.ValidationMessage("Id")</span>
+            </td>
+        </tr>
+        <tr>
+            <td>Gender:</td>
+            <td>
+                <input type="radio" checked=@(checkGender("Male")) name="Gender" value="Male" />Male
+                <input type="radio" checked=@(checkGender("Female")) name="Gender" value="Female" />Female
+                <span class="text-danger">@Html.ValidationMessage("Gender")</span>
+            </td>
+        </tr>
+        <tr>
+            <td>Profession:</td>
+            <td>
+                <select class="form-control" name="Profession">
+                    <option selected disabled>Select</option>
+                    <option selected="@(checkProfession("Student"))" value="Student">Student</option>
+                    <option selected="@(checkProfession("Teacher"))" value="Teacher">Teacher</option>
+                </select>
+                <span class="text-danger">@Html.ValidationMessage("Profession")</span>
+            </td>
+        </tr>
+        <tr>
+            <td>Hobbies:</td>
+            <td>
+                <input type="checkbox" checked=@checkHobby("Games") name="Hobbies[]" value="Games" />Game
+                <input type="checkbox" checked=@checkHobby("Sports") name="Hobbies[]" value="Sports" />Sports
+                <input type="checkbox" checked=@checkHobby("Travelling") name="Hobbies[]" value="Travelling" />Travelling
+                <input type="checkbox" checked=@checkHobby("Music") name="Hobbies[]" value="Music" />Music
+                <br /><span class="text-danger">@Html.ValidationMessage("Hobbies")</span>
+            </td>
+
+        </tr>
+        <tr>
+            <td>Date of Birth:</td>
+            <td>
+                <input type="date" name="Dob" value="@(Model==null?" ":Model.Dob.Date.ToString("yyyy-MM-dd"))" />
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2">
+                <input type="submit" class="btn btn-success" value="Submit" />
+                <input type="reset" class="btn btn-danger" />
+            </td>
+        </tr>
+    </table>
+
+</form>
+
+

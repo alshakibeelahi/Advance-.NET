@@ -1,0 +1,34 @@
+﻿
+@{
+    ViewBag.Title = "MyCart";
+    Layout = "~/Views/Shared/_Customer.cshtml";
+}
+
+<h2>MyCart</h2>
+@{int tot=0; }
+<form method="post">
+    <table class="table table-hover">
+        <tr>
+            <th>Name</th>
+            <th>Price</th>
+            <th>Ordered Quantity</th>
+        </tr>
+
+        @foreach (var item in Model) {
+            { tot += item.Quantity * item.Price; }
+        <tr>
+            <td>@item.Name</td>
+            <td>@item.Price</td>
+            <td>@item.Quantity</td>
+
+        </tr>
+    }
+        <tr>
+            <td rowspan="3">
+                <a href="/Customer/Checkout/@tot" class="btn btn-success">Checkout</a>
+                <a href="/Customer/AddProduct" class="btn btn-success">Back</a>
+            </td>
+        </tr>
+    </table>
+</form>
+

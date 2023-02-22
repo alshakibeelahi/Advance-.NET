@@ -1,0 +1,14 @@
+﻿
+@{
+    ViewBag.Title = "AddtoCart";
+    Layout = "~/Views/Shared/_Customer.cshtml";
+}
+
+<h3>Add to Cart</h3>
+<form method="post">
+    Name:<br /><input type="text" name="Name" value="@Model.Name" /><br />
+    Price:<br /><input type="number" name="Price" value="@Model.Price" /><br />
+    Add Quantity:<br /><input type="number" name="Quantity" min="1" placeholder="1" max="@Model.Quantity" /><br />
+    <input type="submit" class="btn btn-success" value="Add to Curt" />
+    <a href="/Customer/AddProduct" class="btn btn-success">Cancel</a>
+</form>

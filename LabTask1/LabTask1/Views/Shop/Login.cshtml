@@ -4,8 +4,10 @@
 }
 
 <h2>Login</h2>
-<input type="text" placeholder="User Name"/><br />
-<input type="password" placeholder="Password"/><br />
-<a href="/Shop/LoginCheck" class="btn btn-success">Login</a>
+<form method="post" action="/Shop/LoginCheck">
+    <input type="text" name="Uname" placeholder="User Name" /><br />
+    <input type="password" name="Password" placeholder="Password" /><br />
+    <input type="submit" value="Submit" class="btn btn-success" />
+</form>
 
 

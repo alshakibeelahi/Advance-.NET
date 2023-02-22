@@ -1,0 +1,16 @@
+﻿
+@{
+    ViewBag.Title = "Delete";
+    Layout = "~/Views/Shared/_AdminDashboard.cshtml";
+}
+
+<h3>Delete</h3>
+<form method="post">
+    Id:<br /><input type="hidden" name="Id" value="@Model.Id" /><br />
+    Name:<br /><input type="text" name="Name" value="@Model.Name" /><br />
+    Price:<br /><input type="number" name="Price" value="@Model.Price" /><br />
+    Quantity:<br /><input type="number" name="Quantity" value="@Model.Quantity" /><br />
+    Category:<br /><input type="number" name="CatID" value="@Model.CatID" /><br />
+    <input type="submit" class="btn btn-success" value="Delete" />
+</form>
+

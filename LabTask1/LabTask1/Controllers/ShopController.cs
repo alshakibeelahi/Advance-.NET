@@ -1,4 +1,5 @@
-﻿using System;
+﻿using LabTask1.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -21,9 +22,17 @@ namespace LabTask1.Controllers
         {
             return View();
         }
-        public ActionResult LoginCheck()
+        public ActionResult LoginCheck(Login login)
         {
-            return RedirectToAction("MyProfile","Dashboard");
+            if (login.Uname == "Shakib" && login.Password == "123")
+            {
+                TempData["Name"] = login.Uname;
+                return RedirectToAction("MyProfile", "Dashboard");
+            }
+            else
+            {
+                return RedirectToAction("Login");
+            }
         }
     }
 }

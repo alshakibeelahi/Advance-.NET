@@ -1,0 +1,15 @@
+﻿
+@{
+    ViewBag.Title = "Delete";
+    Layout = "~/Views/Shared/_Customer.cshtml";
+}
+
+<h2>Delete</h2>
+<form method="post">
+    Name:<br /><input type="hidden" name="Id" value="@Model.Id" /><br />
+    Name:<br /><input type="text" name="Name" value="@Model.Name" /><br />
+    Phone:<br /><input type="text" name="Phone" value="@Model.Phone" /><br />
+    Password:<br /><input type="password" name="Password" value="@Model.Password" /><br />
+    <input type="submit" class="btn btn-success" value="Delete" />
+</form>
+
