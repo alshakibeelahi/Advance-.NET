@@ -1,0 +1,34 @@
+﻿
+@{
+    ViewBag.Title = "AddProduct";
+    Layout = "~/Views/Shared/_Customer.cshtml";
+}
+
+<h3>Product List</h3>
+<table class="table table-hover">
+    <tr>
+        <th>Name</th>
+        <th>Price</th>
+        <th>Quantity</th>
+        <th></th>
+    </tr>
+    @if (Model != null)
+    {
+        foreach (var item in Model)
+        {
+            <tr>
+                <td>@item.Name</td>
+                <td>@item.Price</td>
+                <td>@item.Quantity</td>
+                <td><a href="/Customer/AddtoCart/@item.Id">Add to Cart</a></td>
+            </tr>
+        }
+    }
+
+</table>
+@for(int i = 1; i <= ViewBag.Page; i++)
+            {
+                <a href="/Customer/AddProduct/@i" class="btn-success">@i</a>
+            }
+
+

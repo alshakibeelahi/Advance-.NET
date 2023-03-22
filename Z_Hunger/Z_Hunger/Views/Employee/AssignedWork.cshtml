@@ -1,0 +1,18 @@
+﻿
+@{
+    ViewBag.Title = "AssignedWork";
+    Layout = "~/Views/Shared/_EmpLayout.cshtml";
+}
+
+<h2>AssignedWork</h2>
+@if (Model != null)
+{
+    <h4>Address: @Model.Collect.Dnr.OrgAddress</h4>
+    <h4>Food Description: @Model.Collect.FoodDes</h4>
+    <h4>Preserved Time: @Model.Collect.PreTime</h4>
+}
+else
+{
+    <h4>No work Assigned</h4>
+}
+

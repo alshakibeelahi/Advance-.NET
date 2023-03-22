@@ -1,0 +1,15 @@
+﻿
+@{
+    ViewBag.Title = "Donate";
+    Layout = "~/Views/Shared/_DonorLayout.cshtml";
+}
+
+<h2>Donate</h2>
+<form method="post">
+    <input type="text" name="FoodDes" placeholder="Food Description" />
+    <span class="text-danger">@Html.ValidationMessage("FoodDes")</span><br />
+    <input type="time" name="PreTime" />
+    <span class="text-danger">@Html.ValidationMessage("PreTime")</span><br />
+    <input type="submit" class="btn btn-success" />
+</form>
+

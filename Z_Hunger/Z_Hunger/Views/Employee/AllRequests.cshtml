@@ -1,0 +1,48 @@
+﻿@model IEnumerable<Z_Hunger.EF.Model.CollectRequest>
+
+@{
+    ViewBag.Title = "AllRequests";
+    Layout = "~/Views/Shared/_EmpLayout.cshtml";
+}
+
+<h2>AllRequests</h2>
+
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Dnr.Organization)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.FoodDes)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.PreTime)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Status)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Dnr.Organization)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.FoodDes)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.PreTime)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Status)
+        </td>
+        <td>
+            @Html.ActionLink("AcceptDonation", "AcceptDonation", new { id=item.Id }) |
+            @Html.ActionLink("DeclineDonation", "DeclineDonation", new { id=item.Id })
+        </td>
+    </tr>
+}
+
+</table>

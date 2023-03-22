@@ -1,0 +1,27 @@
+﻿
+@{
+    ViewBag.Title = "Signup";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Signup</h2>
+
+<form method="post">
+    Name:<br /><input type="text" name="Name" placeholder="Name" />
+    <span class="text-danger">@Html.ValidationMessage("Name")</span><br />
+    User Name:<br /><input type="text" name="Username" placeholder="User Name" />
+    <span class="text-danger">@Html.ValidationMessage("Username")</span><br />
+    Organization:<br /><input type="text" name="Organization" placeholder="Organization" />
+    <span class="text-danger">@Html.ValidationMessage("Organization")</span><br />
+    Organization Address:<br /><input type="text" name="OrgAddress" placeholder="Address" />
+    <span class="text-danger">@Html.ValidationMessage("OrgAddress")</span><br />
+    Email:<br /><input type="text" name="Email" placeholder="Email" />
+    <span class="text-danger">@Html.ValidationMessage("Email")</span><br />
+    Phone:<br /><input type="text" name="Phone" placeholder="Phone" />
+    <span class="text-danger">@Html.ValidationMessage("Phone")</span><br />
+    Password:<br /><input type="password" name="Password" placeholder="Password" />
+    <span class="text-danger">@Html.ValidationMessage("Password")</span><br />
+    Conform Password:<br /><input type="password" name="Conpassword" placeholder="Conpassword" />
+    <span class="text-danger">@Html.ValidationMessage("Conpassword")</span><br />
+    <input type="submit" class="btn btn-success" />
+</form>

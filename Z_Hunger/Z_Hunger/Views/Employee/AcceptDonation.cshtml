@@ -1,0 +1,18 @@
+﻿
+@{
+    ViewBag.Title = "AcceptDonation";
+    Layout = "~/Views/Shared/_EmpLayout.cshtml";
+}
+
+<h2>AcceptDonation</h2>
+<form method="post">
+    <input type="hidden" name="CRId" value="@ViewBag.id"/>
+    <select name="EId">
+        @foreach(var items in Model)
+            {
+                <option value="@items.Id">@items.Name</option>
+            }
+    </select><br />
+    <input type="submit" value="Accept" />
+    <a href="/Employee/AllRequests" class="btn-danger">Cancel</a>
+</form>
