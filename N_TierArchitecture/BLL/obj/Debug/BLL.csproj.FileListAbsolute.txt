@@ -1,0 +1,12 @@
+D:\Codes\Advance-.NET\N_TierArchitecture\BLL\bin\Debug\BLL.dll
+D:\Codes\Advance-.NET\N_TierArchitecture\BLL\bin\Debug\BLL.pdb
+D:\Codes\Advance-.NET\N_TierArchitecture\BLL\bin\Debug\DAL.dll
+D:\Codes\Advance-.NET\N_TierArchitecture\BLL\bin\Debug\EntityFramework.dll
+D:\Codes\Advance-.NET\N_TierArchitecture\BLL\bin\Debug\DAL.pdb
+D:\Codes\Advance-.NET\N_TierArchitecture\BLL\bin\Debug\DAL.dll.config
+D:\Codes\Advance-.NET\N_TierArchitecture\BLL\bin\Debug\EntityFramework.xml
+D:\Codes\Advance-.NET\N_TierArchitecture\BLL\obj\Debug\BLL.csproj.AssemblyReference.cache
+D:\Codes\Advance-.NET\N_TierArchitecture\BLL\obj\Debug\BLL.csproj.CoreCompileInputs.cache
+D:\Codes\Advance-.NET\N_TierArchitecture\BLL\obj\Debug\BLL.csproj.CopyComplete
+D:\Codes\Advance-.NET\N_TierArchitecture\BLL\obj\Debug\BLL.dll
+D:\Codes\Advance-.NET\N_TierArchitecture\BLL\obj\Debug\BLL.pdb
