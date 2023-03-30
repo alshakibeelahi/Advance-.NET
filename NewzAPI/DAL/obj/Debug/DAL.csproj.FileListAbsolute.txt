@@ -1,0 +1,15 @@
+D:\Codes\Advance-.NET\NewzAPI\DAL\bin\Debug\DAL.dll.config
+D:\Codes\Advance-.NET\NewzAPI\DAL\bin\Debug\DAL.dll
+D:\Codes\Advance-.NET\NewzAPI\DAL\bin\Debug\DAL.pdb
+D:\Codes\Advance-.NET\NewzAPI\DAL\bin\Debug\EntityFramework.dll
+D:\Codes\Advance-.NET\NewzAPI\DAL\bin\Debug\EntityFramework.SqlServer.dll
+D:\Codes\Advance-.NET\NewzAPI\DAL\bin\Debug\EntityFramework.xml
+D:\Codes\Advance-.NET\NewzAPI\DAL\bin\Debug\EntityFramework.SqlServer.xml
+D:\Codes\Advance-.NET\NewzAPI\DAL\obj\Debug\DAL.csproj.AssemblyReference.cache
+D:\Codes\Advance-.NET\NewzAPI\DAL\obj\Debug\DAL.csproj.CoreCompileInputs.cache
+D:\Codes\Advance-.NET\NewzAPI\DAL\obj\Debug\DAL.csproj.CopyComplete
+D:\Codes\Advance-.NET\NewzAPI\DAL\obj\Debug\DAL.dll
+D:\Codes\Advance-.NET\NewzAPI\DAL\obj\Debug\DAL.pdb
+D:\Codes\Advance-.NET\NewzAPI\DAL\obj\Debug\DAL.Migrations.Dbinit.resources
+D:\Codes\Advance-.NET\NewzAPI\DAL\obj\Debug\DAL.csproj.GenerateResource.cache
+D:\Codes\Advance-.NET\NewzAPI\DAL\obj\Debug\DAL.Migrations.nameChanged.resources

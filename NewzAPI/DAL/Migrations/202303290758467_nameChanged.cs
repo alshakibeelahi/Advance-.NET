@@ -1,0 +1,18 @@
+﻿namespace DAL.Migrations
+{
+    using System;
+    using System.Data.Entity.Migrations;
+    
+    public partial class nameChanged : DbMigration
+    {
+        public override void Up()
+        {
+            RenameTable(name: "dbo.News", newName: "Newzs");
+        }
+        
+        public override void Down()
+        {
+            RenameTable(name: "dbo.Newzs", newName: "News");
+        }
+    }
+}
