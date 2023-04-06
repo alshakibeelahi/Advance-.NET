@@ -1,26 +1,43 @@
-﻿using DAL.Model;
+﻿using DAL.Interfaces;
+using DAL.Model;
 using System;
 using System.Collections.Generic;
+using System.ComponentModel.Design;
 using System.Linq;
+using System.Runtime.InteropServices.ComTypes;
+using System.Runtime.Remoting.Contexts;
 using System.Text;
 using System.Threading.Tasks;
 
 namespace DAL.Repo
 {
-    public class NewzRepo
+    internal class NewzRepo : Repo, IRepo<Newz, int, bool>
     {
-        static NZContest db;
-        static NewzRepo()
+
+        public bool Delete(int id)
         {
-            db = new NZContest();
+            throw new NotImplementedException();
         }
-        public static List<Newz> AllNews()
+
+        public List<Newz> Get()
         {
             return db.News.ToList();
         }
-        public static Newz GetNewz(int id)
+
+        public Newz Get(int id)
         {
             return db.News.Find(id);
+        }
+
+        public bool Insert(Newz obj)
+        {
+            var news = db.News.Add(obj);
+            return db.SaveChanges() > 0;
+        }
+
+        public bool Update(Newz obj)
+        {
+            throw new NotImplementedException();
         }
     }
 }

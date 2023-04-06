@@ -38,6 +38,21 @@ namespace NewzAPI.Controllers
                 return Request.CreateErrorResponse(HttpStatusCode.BadRequest, ex);
             }
         }
+        /*
+        [HttpGet]
+        [Route("api/news/cat")]
+        public HttpResponseMessage CatNews(string name)
+        {
+            try
+            {
+                var data = NewzServices.CatNewz(name);
+                return Request.CreateResponse(HttpStatusCode.OK, data);
+            }
+            catch (Exception ex)
+            {
+                return Request.CreateErrorResponse(HttpStatusCode.BadRequest, ex);
+            }
+        }*/
 
     }
 }

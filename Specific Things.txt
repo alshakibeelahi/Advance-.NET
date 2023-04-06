@@ -1,0 +1,17 @@
+public static List<Newz> AllNews()
+        {
+            return db.News.ToList();
+        }
+        public static Newz GetNewz(int id)
+        {
+            return db.News.Find(id);
+        }
+        public static List<Newz> CatgNewz(string name)
+        {
+            var data = (from news in db.News
+                        join category in db.Categories
+                        on news.CId equals category.Id
+                        where category.Name.Equals(name)
+                        select news).ToList();
+            return data;
+        }

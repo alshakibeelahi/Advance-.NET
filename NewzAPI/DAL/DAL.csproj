@@ -52,6 +52,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Class1.cs" />
+    <Compile Include="DataAccess.cs" />
+    <Compile Include="Interfaces\IRepo.cs" />
     <Compile Include="Migrations\202303290734368_Dbinit.cs" />
     <Compile Include="Migrations\202303290734368_Dbinit.designer.cs">
       <DependentUpon>202303290734368_Dbinit.cs</DependentUpon>
@@ -67,6 +69,7 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Repo\CategoryRepo.cs" />
     <Compile Include="Repo\NewsRepo.cs" />
+    <Compile Include="Repo\Repo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
