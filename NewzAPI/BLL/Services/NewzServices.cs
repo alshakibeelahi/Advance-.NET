@@ -20,6 +20,11 @@ namespace BLL.Services
             return Convert(data);
 
         }
+        public static bool Insert(NewzDTOs nws)
+        {
+            var data = Convert(nws);
+            return DataAccess.NewsContent().Insert(data);
+        }
         public static NewzDTOs SpecNews(int id)
         {
             var data = DataAccess.NewsContent().Get(id);
@@ -27,9 +32,30 @@ namespace BLL.Services
         }
         /*public static List<NewzDTOs> CatNewz(string name)
         {
-            var data = NewzRepo.CatgNewz(name);
+            var data = DataAccess.NewsContent().CatgNewz(name);
             return Convert(data);
         }*/
+        static List<Newz> Convert(List<NewzDTOs> nwz)
+        {
+            var data = new List<Newz>();
+            foreach (NewzDTOs ns in nwz)
+            {
+                data.Add(Convert(ns));
+            }
+            return data;
+        }
+
+        static Newz Convert(NewzDTOs newz)
+        {
+            return new Newz()
+            {
+                Id = newz.Id,
+                Title = newz.Title,
+                Description = newz.Description,
+                Date = newz.Date,
+                CId = newz.CId,
+            };
+        }
         static List<NewzDTOs> Convert(List<Newz> nwz)
         {
             var data = new List<NewzDTOs>();

@@ -15,5 +15,9 @@ namespace DAL
         {
             return new NewzRepo();
         }
+        public static IRepo<Category,int,bool> CategoriesContent()
+        {
+            return new CategoryRepo();
+        }
     }
 }
