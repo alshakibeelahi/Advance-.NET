@@ -11,12 +11,12 @@ namespace Z_Hunger.Cust_Auth
     {
         protected override bool AuthorizeCore(HttpContextBase httpContext)
         {
-            var user = (Person)httpContext.Session["user"];
+            var user = Session["UserType"].tostring();
             var nuser = (Employee)httpContext.Session["user"];
             if (user != null && user.Role.Equals("Employee") && nuser.Designation.Equals("Admin")) return true;
 
             httpContext.Response.StatusCode = 401;
-            httpContext.Response.Redirect("/Home/Login");
+            httpContext.Response.Redirect("/Auth/Login");
             return false;
         }
     }

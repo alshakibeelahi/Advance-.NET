@@ -1,0 +1,22 @@
+Packages:
+EF --> Microsoft.EntityFrameworkCore
+Migration  --> Microsoft.EntityFrameworkCore.Design
+SQL Server --> Microsoft.EntityFrameworkCore.SqlServer
+
+Connection String: Go to --> appsettings.json
+Syntax:
+"ConnectionStrings":{
+	"DefaultConnection":"server=;database=;trusted_connection=true"
+}
+
+To Register: Go to --> Program.cs
+Syntax: 
+builder.Services.AddDbContext<---Name--->(options=>
+{
+	options.UseSqlServer(builder.Configaratiom.GetConnectionString("DefaultConnection"));
+});
+
+Commands:
+1. go to API directory first with "cd" command
+2. dotnet ef migrations add Name Initial --project ..\DAL --context MMContext
+3. dotnet ef database update Initial --project ..\DAL --context MMContext

@@ -1,0 +1,12 @@
+AutoMapper -> Jimmy Bogard -> v10
+
+Syntax:
+	var data = DataAccess. -> .....;
+	var cfg = new MapperConfiguration(c=>{
+		c.CreateMap<Input-Type Class, Output-Type Class>();
+	});
+	
+	var mapper = new Mapper(cfg);
+	
+	var mapped = mapper.Map<Format-Of-Output-Type>(data);
+

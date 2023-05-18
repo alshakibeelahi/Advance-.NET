@@ -10,13 +10,13 @@ namespace ProjectAPI.Controllers
 {
     public class ProjectController : ApiController
     {
-        [HttpGet]
-        [Route("api/project/spec/{status}")]
-        public HttpResponseMessage SpecStat(string status)
+        [HttpPost]
+        [Route("api/project/{status}")]
+        public HttpResponseMessage SpecStat(string stat)
         {
             try
             {
-                var data = ProjectService.GetSpec(status);
+                var data = ProjectService.GetSpec(stat);
                 return Request.CreateResponse(HttpStatusCode.OK, data);
             }
             catch (Exception ex)

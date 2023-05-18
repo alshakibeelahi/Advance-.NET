@@ -28,7 +28,7 @@
                             Date = DateTime.Now,
                             CId = random.Next(1, 3)
                         }
-                    ); ;
+                    );
             }
         }
 
